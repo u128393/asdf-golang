@@ -32,6 +32,9 @@ To set `GOROOT` in your shell's initialization add the following:
 **zsh shell**  
 `. ~/.asdf/plugins/golang/set-env.zsh`  
 
+**fish shell**  
+`. ~/.asdf/plugins/golang/set-env.fish`  
+
 ## When using `go get` or `go install`
 
 After using `go get` or `go install` to install a package you need to run `asdf reshim golang` to get any new shims.
