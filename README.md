@@ -18,7 +18,7 @@ golang plugin for [asdf version manager](https://github.com/asdf-vm/asdf)
 ## Install
 
 ```bash
-asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+asdf plugin add golang https://github.com/u128393/asdf-golang.git
 ```
 
 ## Use
@@ -57,16 +57,20 @@ You can specify a non-default location of this file by setting a `ASDF_GOLANG_DE
 When using `.tool-versions` or `.go-version`, the exact version specified in the
 file will be selected.
 
-When using `go.mod`, the highest compatible version that is currently installed
+~~When using `go.mod`, the highest compatible version that is currently installed
 will be selected. As per the [Go modules
 reference](https://golang.org/ref/mod#go-mod-file-go), that is the highest minor
 version with a matching major version. For example, a `go 1.14` directive in a
 `go.mod` file will result in the highest installed `1.minor.patch` being
-selected, not necessarily `1.14.patch`.
+selected, not necessarily `1.14.patch`.~~
 
-**Note**: Users can explicitly exclude or include `go.mod` and `go.work` by
+~~**Note**: Users can explicitly exclude or include `go.mod` and `go.work` by
 setting `ASDF_GOLANG_MOD_VERSION_ENABLED`. Currently it defaults to `true`, but that
-may change in the future, so it should be explicitly set.
+may change in the future, so it should be explicitly set.~~
+
+Notes(u128393): The above is customized. No warning message would be shown if
+`ASDF_GOLANG_MOD_VERSION_ENABLED` is not set. And the minor version specified
+by `go.mod` or `go.work` would be used.
 
 ## Architecture Override
 
